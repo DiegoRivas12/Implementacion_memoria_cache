@@ -117,7 +117,7 @@ void llenarArreglo(double*&arreglo,int valor,int cantidad){
 void escribirComparacion(string nombres[],string nombre,double** tiempoRegistrado,int cantidadMetodos,int repeticion,int n,int incremento){
     ofstream archivo;
     //cout<<"hahaha"<<endl;
-    archivo.open("comparacionMetodos.py",ios::out);
+    archivo.open("dos_for_anidados/comparacionMetodos.py",ios::out);
     if(archivo.fail()){
         std::cout<<"No se puedo abrir el archivo";
         exit(1);
@@ -166,7 +166,7 @@ void escribirComparacion(string nombres[],string nombre,double** tiempoRegistrad
 void escribir(string nombre,double** tiempoRegistrado,int fila,int repeticion,int n,int incremento){
     ofstream archivo;
 
-    archivo.open(nombre+".py",ios::out);
+    archivo.open("dos_for_anidados/"+nombre+".py",ios::out);
     if(archivo.fail()){
         std::cout<<"No se puedo abrir el archivo";
         exit(1);
