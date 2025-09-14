@@ -16,7 +16,7 @@ void escribir(string nombre,double** tiempoRegistrado,int fila,int repeticion,in
 int main(){
     double t0, t1;
     int cantidadMetodos=2;//Cantidad de metodos de cache a analizar
-    int repeticion=100;//Cantidad de veces que creamos arreglos y los analizamos
+    int repeticion=20;//Cantidad de veces que creamos arreglos y los analizamos
     double** tiempoRegistrado=new double*[cantidadMetodos];
     for(int i=0;i<cantidadMetodos;i++){
         tiempoRegistrado[i]=new double[repeticion];//Creando columnas
@@ -117,7 +117,7 @@ void llenarArreglo(double*&arreglo,int valor,int cantidad){
 void escribirComparacion(string nombres[],string nombre,double** tiempoRegistrado,int cantidadMetodos,int repeticion,int n,int incremento){
     ofstream archivo;
     //cout<<"hahaha"<<endl;
-    archivo.open("dos_for_anidados/comparacionMetodos.py",ios::out);
+    archivo.open("dos_for_anidados_carpeta/comparacionMetodos.py",ios::out);
     if(archivo.fail()){
         std::cout<<"No se puedo abrir el archivo";
         exit(1);
@@ -166,7 +166,7 @@ void escribirComparacion(string nombres[],string nombre,double** tiempoRegistrad
 void escribir(string nombre,double** tiempoRegistrado,int fila,int repeticion,int n,int incremento){
     ofstream archivo;
 
-    archivo.open("dos_for_anidados/"+nombre+".py",ios::out);
+    archivo.open("dos_for_anidados_carpeta/"+nombre+".py",ios::out);
     if(archivo.fail()){
         std::cout<<"No se puedo abrir el archivo";
         exit(1);
